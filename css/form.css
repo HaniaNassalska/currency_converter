@@ -1,0 +1,18 @@
+.form__legend {
+    padding: 15px;
+}
+
+.form__labelText {
+    width: 150px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.form__button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin: 30px;
+    font-weight: 500;
+    border: solid yellow;
+}
