@@ -33,28 +33,29 @@
 <body class="body">
     <div class="container">
         <header>
-            <h1 class="header">Przelicz złotówki na euro</h1>
+            <h1 class="header">Przelicz złotówki na dolary / euro / funty</h1>
         </header>
         <form class="js-form">
             <fieldset>
-                <legend class="form__legend">Kalkulator walut PLN - EUR</legend>
-                <p><label>Kwota w zł*: <input class="form__labelText js-form__plnAmount" type="number" name="PLN"
-                            autofocus min="0" step="any" required></label></p>
-                <p>
-                    <label>Wybierz walutę:
-                        <select class="form__labelText js-currencyOption">
-                            <option value="USD">Dolar</option>
-                            <option value="EUR">Euro</option>
-                            <option value="GBP">Funt</option>
-                        </select>
-                    </label>
+                <legend class="form__legend">Kalkulator walut</legend>
+                <p><label><span class="form__labelText">Kwota w zł*:</span><input class="form__field js-plnAmount"
+                            type="number" name="PLN" autofocus min="0" step="any" required></label></p>
+                    <p><label><span class="form__labelText">Wybierz walutę:</span><select class="form__field js-currency"
+                                name="currency"></label></p></p>
+                                <option value="USD">dolar (USD)</option>
+                                <option value="EUR">euro (EUR)</option>
+                                <option value="GBP">funt (GBP)</option>
+                            </select>
+                            <p>
+                                <button class="form__button">Przelicz!</button>
+                    
                 </p>
-
-                <button class="form__button">Przelicz!</button>
+                
+                <p class="form__requaierdInfo">*pole obowiązkowe</p>
 
             </fieldset>
         </form>
-        <p class="container__paragraphResult">Kwota:<strong class="js-form__amountResult">0.00</strong></p>
+        <p class="container__paragraphResult">Kwota:<strong class="js-amountResult">0.00</strong></p>
 
     </div>
 
