@@ -1,33 +1,43 @@
-const eurRate = 4.68;
-const usdRate = 4.22;
-const gbpRate = 5.55;
-let amountElement = document.querySelector(".js-plnAmount");
-let formElement = document.querySelector(".js-form");
-let currencyElement = document.querySelector(".js-currency");
-let resultElement = document.querySelector(".js-amountResult");
+{
+    const calculateResult = (plnAmount, currency) => {
+        const eurRate = 4.68;
+        const usdRate = 4.22;
+        const gbpRate = 5.55;
 
+        switch (currency) {
+            case "USD":
+                return plnAmount / usdRate;
 
+            case "EUR":
+                return plnAmount / eurRate;
+                
 
-formElement.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    let plnAmount = +amountElement.value;
-    let currency = currencyElement.value;
-
-    let result;
-
-    switch (currency) {
-        case "USD":
-            result = plnAmount / usdRate;
-            break;
-
-        case "EUR":
-            result = plnAmount / eurRate;
-            break;
-
-        case "GBP":
-            result = plnAmount / gbpRate;
-            break;
+            case "GBP":
+                return plnAmount / gbpRate;
+        }
+    };
+    const updateResultText = (result) => {
+        const resultElement = document.querySelector(".js-amountResult");
+        resultElement.innerText = result.toFixed(2);
     }
-   resultElement.innerText = result.toFixed(2)
-});
+    
+        const onFormSubmit = (event) => {
+        event.preventDefault();
+        const amountElement = document.querySelector(".js-plnAmount");
+        const currencyElement = document.querySelector(".js-currency");
+
+        const plnAmount = +amountElement.value;
+        let currency = currencyElement.value;
+
+        const result = calculateResult(plnAmount, currency);
+        updateResultText (result)
+    };
+
+    const init = () => {
+        const formElement = document.querySelector(".js-form");
+       
+        formElement.addEventListener("submit", onFormSubmit);
+    };
+    init();
+
+}
