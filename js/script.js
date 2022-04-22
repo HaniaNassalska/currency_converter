@@ -10,7 +10,6 @@
 
             case "EUR":
                 return plnAmount / eurRate;
-                
 
             case "GBP":
                 return plnAmount / gbpRate;
@@ -20,8 +19,8 @@
         const resultElement = document.querySelector(".js-amountResult");
         resultElement.innerText = result.toFixed(2);
     }
-    
-        const onFormSubmit = (event) => {
+
+    const onFormSubmit = (event) => {
         event.preventDefault();
         const amountElement = document.querySelector(".js-plnAmount");
         const currencyElement = document.querySelector(".js-currency");
@@ -30,12 +29,12 @@
         let currency = currencyElement.value;
 
         const result = calculateResult(plnAmount, currency);
-        updateResultText (result)
+        updateResultText(result)
     };
 
     const init = () => {
         const formElement = document.querySelector(".js-form");
-       
+
         formElement.addEventListener("submit", onFormSubmit);
     };
     init();
