@@ -17,8 +17,9 @@
     };
     const updateResultText = (result) => {
         const resultElement = document.querySelector(".js-amountResult");
+        
         resultElement.innerText = result.toFixed(2);
-    }
+    };
 
     const onFormSubmit = (event) => {
         event.preventDefault();

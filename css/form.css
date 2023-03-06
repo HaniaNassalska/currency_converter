@@ -4,18 +4,15 @@
 
 .form__labelText {
     width: 100%;
-
     max-width: 200px;
     display: inline-block;
     margin-right: 7px;
-
 }
 
 .form__field {
     padding: 5px;
     width: 100%;
     max-width: 160px;
-
 }
 
 .form__button {

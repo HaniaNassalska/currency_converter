@@ -25,9 +25,6 @@
         rel="stylesheet">
 
     <script defer src="js/script.js"></script>
-
-
-
 </head>
 
 <body class="body">
@@ -40,25 +37,20 @@
                 <legend class="form__legend">Kalkulator walut</legend>
                 <p><label><span class="form__labelText">Kwota w zł*:</span><input class="form__field js-plnAmount"
                             type="number" name="PLN" autofocus min="0" step="any" required></label></p>
-                    <p><label><span class="form__labelText">Wybierz walutę:</span><select class="form__field js-currency"
-                                name="currency"></label></p></p>
-                                <option value="USD">dolar (USD)</option>
-                                <option value="EUR">euro (EUR)</option>
-                                <option value="GBP">funt (GBP)</option>
-                            </select>
-                            <p>
-                                <button class="form__button">Przelicz!</button>
-                    
+                <p><label><span class="form__labelText">Wybierz walutę:</span><select class="form__field js-currency"
+                            name="currency"></label></p>
+                <option value="USD">dolar (USD)</option>
+                <option value="EUR">euro (EUR)</option>
+                <option value="GBP">funt (GBP)</option>
+                </select>
+                <p>
+                    <button class="form__button">Przelicz!</button>
                 </p>
-                
                 <p class="form__requaierdInfo">*pole obowiązkowe</p>
-
             </fieldset>
         </form>
         <p class="container__paragraphResult">Kwota:<strong class="js-amountResult">0.00</strong></p>
-
     </div>
-
 </body>
 
 </html>
